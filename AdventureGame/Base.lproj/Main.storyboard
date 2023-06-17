@@ -23,7 +23,7 @@
                                 <rect key="frame" x="30" y="89" width="333" height="699"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are transported to the Tombs of A'taun, where you encounter a dragon. What do you do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uK-9Z-HTe" userLabel="StoryLabel">
-                                        <rect key="frame" x="10" y="0.0" width="313" height="334.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="334.66666666666669"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -41,6 +41,9 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="choiceSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H07-w1-Q1Y"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjD-gs-ijj" userLabel="ButtonTwo">
                                                 <rect key="frame" x="0.0" y="176.99999999999994" width="273" height="157.33333333333331"/>
@@ -52,15 +55,14 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="choiceSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNw-nn-DDm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9uK-9Z-HTe" firstAttribute="leading" secondItem="o29-qV-Eiw" secondAttribute="leading" constant="30" id="BM3-on-9Co"/>
-                                    <constraint firstItem="9uK-9Z-HTe" firstAttribute="leading" secondItem="o29-qV-Eiw" secondAttribute="leading" constant="10" id="M9c-mX-N3E"/>
-                                    <constraint firstAttribute="trailing" secondItem="9uK-9Z-HTe" secondAttribute="trailing" constant="30" id="Ows-aV-TgK"/>
-                                    <constraint firstAttribute="trailing" secondItem="9uK-9Z-HTe" secondAttribute="trailing" constant="10" id="b8R-Kx-sjT"/>
                                     <constraint firstAttribute="trailing" secondItem="ch7-h3-fXE" secondAttribute="trailing" constant="30" id="l3W-oh-apy"/>
                                     <constraint firstItem="ch7-h3-fXE" firstAttribute="leading" secondItem="o29-qV-Eiw" secondAttribute="leading" constant="30" id="qew-im-1EX"/>
                                 </constraints>
@@ -79,6 +81,12 @@
                             <constraint firstItem="wbx-iN-Q2i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cp2-A7-eAW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="background_view" destination="wbx-iN-Q2i" id="HXw-7a-HGq"/>
+                        <outlet property="button_one" destination="ZE1-vF-Odw" id="kSS-yD-sfH"/>
+                        <outlet property="button_two" destination="wjD-gs-ijj" id="ntm-wj-YOF"/>
+                        <outlet property="story_label" destination="9uK-9Z-HTe" id="9pG-Qm-DPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

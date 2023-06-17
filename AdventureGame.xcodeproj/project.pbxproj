@@ -13,6 +13,8 @@
 		B0B453DF2A3D46D90025C69F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B453DD2A3D46D90025C69F /* Main.storyboard */; };
 		B0B453E12A3D46DB0025C69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B453E02A3D46DB0025C69F /* Assets.xcassets */; };
 		B0B453E42A3D46DB0025C69F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B453E22A3D46DB0025C69F /* LaunchScreen.storyboard */; };
+		B0B453EC2A3D6DBE0025C69F /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B453EB2A3D6DBE0025C69F /* Story.swift */; };
+		B0B453EE2A3D6DD60025C69F /* StoryLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B453ED2A3D6DD60025C69F /* StoryLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B0B453E02A3D46DB0025C69F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B453E32A3D46DB0025C69F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B453E52A3D46DB0025C69F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B453EB2A3D6DBE0025C69F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		B0B453ED2A3D6DD60025C69F /* StoryLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		B0B453D62A3D46D90025C69F /* AdventureGame */ = {
 			isa = PBXGroup;
 			children = (
-				B0B453D72A3D46D90025C69F /* AppDelegate.swift */,
+				B0B453EF2A3D6DED0025C69F /* Model */,
+				B0B453F02A3D6E0B0025C69F /* View */,
 				B0B453D92A3D46D90025C69F /* SceneDelegate.swift */,
-				B0B453DB2A3D46D90025C69F /* ViewController.swift */,
+				B0B453D72A3D46D90025C69F /* AppDelegate.swift */,
 				B0B453DD2A3D46D90025C69F /* Main.storyboard */,
 				B0B453E02A3D46DB0025C69F /* Assets.xcassets */,
 				B0B453E22A3D46DB0025C69F /* LaunchScreen.storyboard */,
 				B0B453E52A3D46DB0025C69F /* Info.plist */,
 			);
 			path = AdventureGame;
+			sourceTree = "<group>";
+		};
+		B0B453EF2A3D6DED0025C69F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0B453EB2A3D6DBE0025C69F /* Story.swift */,
+				B0B453ED2A3D6DD60025C69F /* StoryLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0B453F02A3D6E0B0025C69F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0B453DB2A3D46D90025C69F /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +162,9 @@
 			files = (
 				B0B453DC2A3D46D90025C69F /* ViewController.swift in Sources */,
 				B0B453D82A3D46D90025C69F /* AppDelegate.swift in Sources */,
+				B0B453EE2A3D6DD60025C69F /* StoryLogic.swift in Sources */,
 				B0B453DA2A3D46D90025C69F /* SceneDelegate.swift in Sources */,
+				B0B453EC2A3D6DBE0025C69F /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
