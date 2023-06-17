@@ -15,10 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var button_two: UIButton!
 
     var story_logic = StoryLogic()
+    var clock = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        refreshUI()
+    }
+    
+    private func refreshUI() {
+        // gets a current time for the clock itself on the top
+        clock = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:#selector(self.updateUI), userInfo: nil, repeats: true)
     }
 
     @IBAction func choiceSubmitted(_ sender: UIButton) {
@@ -31,7 +37,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateUI() {
+    @objc func updateUI() {
         story_label.text = story_logic.get_story()
         background_view.image = UIImage(named: String(story_logic.get_index()))
         button_one.setTitle(story_logic.get_option_one(), for: .normal)
